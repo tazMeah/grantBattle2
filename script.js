@@ -68,6 +68,10 @@ if (confirm("Press OK to attack. Cancel to quit.")) {
       break;
   }
 } else {
+  //reset values
+  yourWins = 0;
+  grantHealth = 10;
+  yourHealth = 40;
   break;
 }
 
