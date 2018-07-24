@@ -21,8 +21,13 @@ while (yourHealth > 0 || grantHealth > 0) {
   console.log(`${yourName} has ${yourHealth} health left.`);
   console.log(`Grant the Mighty Chicken has ${grantHealth} health left.`);
 
-yourHealth -= (Math.ceil(Math.random()*2));
-grantHealth -= (Math.ceil(Math.random()*2));
+// yourHealth -= (Math.ceil(Math.random()*2));
+// grantHealth -= (Math.ceil(Math.random()*2));
+
+//confirm if attack
+if (confirm("Press OK to attack. Cancel to quit.")) {
+  yourHealth -= getDamage();
+  grantHealth -= getDamage();
 
 
 
@@ -62,12 +67,17 @@ grantHealth -= (Math.ceil(Math.random()*2));
       console.log("Grant wins! Game over.");
       break;
   }
+} else {
+  break;
+}
+
+
 
 }
 }
 
 function getDamage() {
-
+  return Math.ceil(Math.random()* 5);
 }
 
 
